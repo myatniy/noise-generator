@@ -10,7 +10,7 @@
   </head>
   <body>
     <p class="logo">Sound Generator</p>
-    <img src="volume-icons/speaker-on.png" id="speakerState" class="speaker" onclick="changeSpeakerState()">
+    <img src="volume-icons/speaker-on.png" id="speakerId" class="speaker">
     <img src="stopwatch.png" id="stopwatchId" class="stopwatch">
 
     <div class="centered-layout">
@@ -20,7 +20,7 @@
           <audio id="playWave">
             <source src="audio/wave-sound.ogg" type="audio/ogg">
           </audio>
-          <img src="weather-icons/030-wave.png" class="sound" onclick="showVolume1()" id="image1">
+          <img src="weather-icons/030-wave.png" class="sound" id="image1">
           <input type="range" min="1" max="100" value="50" class="slider" id="volume1">
         </div>
 
@@ -83,6 +83,6 @@
       </div>
     </div>
 
-    <script defer src="my-script.js"></script>
+    <script src="my-script.js"></script>
   </body>
 </html>
