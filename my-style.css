@@ -1,18 +1,126 @@
 :root {
-    font-family: 'Roboto Condensed', Arial;
+  font-family: "Roboto Condensed", Arial;
+  color: white;
+  --default-img-opacity: 0.5;
+}
+
+*::selection {
+  background: darkblue;
 }
 
 body {
-    background-color: rgb(51, 102, 255);
+  background-color: rgb(51, 102, 255);
 }
 
 .logo {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 30px;
-    color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
 }
 
-.logo::selection {
-    background: darkblue;
+.speaker {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  float: right;
+  position: relative;
+  top: -64px;
+}
+
+.stopwatch {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  float: right;
+  position: relative;
+  top: -64px;
+  left: -8px;
+  opacity: 0.5;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 200px;
+  margin: 15px 5px 15px;
+  text-align: center;
+}
+
+.centered-layout {
+  margin: 0 auto;
+  width: 420px;
+}
+
+.sound {
+  width: 150px;
+  height: 150px;
+  filter: invert(1);
+}
+
+.slider-container {
+  width: 90%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 3px;
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  position: relative;
+  visibility: hidden;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#image1 {
+  opacity: var(--default-img-opacity);
+}
+
+#image2 {
+  opacity: var(--default-img-opacity);
+}
+
+#image3 {
+  opacity: var(--default-img-opacity);
+}
+
+#image4 {
+  opacity: var(--default-img-opacity);
+}
+
+#image5 {
+  opacity: var(--default-img-opacity);
+}
+
+#image6 {
+  opacity: var(--default-img-opacity);
+}
+
+#image7 {
+  opacity: var(--default-img-opacity);
+}
+
+#image8 {
+  opacity: var(--default-img-opacity);
 }
