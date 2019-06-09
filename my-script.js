@@ -1,90 +1,12 @@
+/* eslint-disable space-before-function-paren */
 /* eslint-disable semi */
-var soundWaveLoop = document.getElementById('playWave');
-soundWaveLoop.loop = true;
-
-var volumeSlider1 = document.getElementById('volume1');
-soundWaveLoop.volume = volumeSlider1.value / 100;
-
-volumeSlider1.oninput = function () {
-  soundWaveLoop.volume = this.value / 100;
-}
-
-var soundRainLoop = document.getElementById('playRain');
-soundRainLoop.loop = true;
-
-var volumeSlider2 = document.getElementById('volume2');
-soundRainLoop.volume = volumeSlider2.value / 100;
-
-volumeSlider2.oninput = function () {
-  soundRainLoop.volume = this.value / 100;
-}
-
-var soundThunderLoop = document.getElementById('playThunder');
-soundThunderLoop.loop = true;
-
-var volumeSlider3 = document.getElementById('volume3');
-soundThunderLoop.volume = volumeSlider3.value / 100;
-
-volumeSlider3.oninput = function () {
-  soundThunderLoop.volume = this.value / 100;
-}
-
-var soundWindLoop = document.getElementById('playWind');
-soundWindLoop.loop = true;
-
-var volumeSlider4 = document.getElementById('volume4');
-soundWindLoop.volume = volumeSlider4.value / 100;
-
-volumeSlider4.oninput = function () {
-  soundWindLoop.volume = this.value / 100;
-}
-
-var soundBlizzardLoop = document.getElementById('playBlizzard');
-soundBlizzardLoop.loop = true;
-
-var volumeSlider5 = document.getElementById('volume5');
-soundBlizzardLoop.volume = volumeSlider5.value / 100;
-
-volumeSlider5.oninput = function () {
-  soundBlizzardLoop.volume = this.value / 100;
-}
-
-var soundNightLoop = document.getElementById('playNight');
-soundNightLoop.loop = true;
-
-var volumeSlider6 = document.getElementById('volume6');
-soundNightLoop.volume = volumeSlider6.value / 100;
-
-volumeSlider6.oninput = function () {
-  soundNightLoop.volume = this.value / 100;
-}
-
-var soundHailstormLoop = document.getElementById('playHailstorm');
-soundHailstormLoop.loop = true;
-
-var volumeSlider7 = document.getElementById('volume7');
-soundHailstormLoop.volume = volumeSlider7.value / 100;
-
-volumeSlider7.oninput = function () {
-  soundHailstormLoop.volume = this.value / 100;
-}
-
-var soundPinkLoop = document.getElementById('playPink');
-soundPinkLoop.loop = true;
-
-var volumeSlider8 = document.getElementById('volume8');
-soundPinkLoop.volume = volumeSlider8.value / 100;
-
-volumeSlider8.oninput = function () {
-  soundPinkLoop.volume = this.value / 100;
-}
 
 // ********** turn off/on sound **********
 
 // variable below is used for correct execution of ChangeVolumeState(), because i have 2 minutes experience in JS
 let cursedSrcOfSpeakerId = document.getElementById('speakerId').src;
 
-speakerId.onclick = function () {
+speakerId.onclick = function() {
   const srcOfSpeakerId = document.getElementById('speakerId');
   const audio = document.querySelectorAll('audio');
 
@@ -99,80 +21,32 @@ speakerId.onclick = function () {
   }
 }
 
-function muteAudio (elem) {
+function muteAudio(elem) {
   elem.muted = true;
 }
 
-function unmuteAudio (elem) {
+function unmuteAudio(elem) {
   elem.muted = false;
 }
 
-// ********** show/hide volume slider **********
+// ********** show/hide volume slider + audio volume control **********
 
-function imageClick (volumeSlider, imageOpacity, setAudio) {
-  if (volumeSlider.style.visibility === 'hidden') {
-    volumeSlider.style.visibility = 'visible';
-    imageOpacity.style.opacity = 1;
-    setAudio.play();
+function playSound(volumeId, imageId, playSoundId) {
+  let volumeSliderVisibility = volumeId;
+  let isSoundActive = imageId;
+  let playAudio = playSoundId;
+  playAudio.loop = true;
+
+  if (volumeSliderVisibility.style.visibility === 'hidden') {
+    volumeSliderVisibility.style.visibility = 'visible';
+    isSoundActive.style.opacity = 1;
+    playAudio.play();
+    volumeSliderVisibility.oninput = function () {
+      playSoundId.volume = this.value / 100;
+    }
   } else {
-    volumeSlider.style.visibility = 'hidden';
-    imageOpacity.style.opacity = 0.5;
-    setAudio.pause();
+    volumeSliderVisibility.style.visibility = 'hidden';
+    isSoundActive.style.opacity = 0.5;
+    playAudio.pause();
   }
-}
-
-image1.onclick = function () {
-  var volumeSliderVisibility = document.getElementById('volume1');
-  var soundIconOpacity = document.getElementById('image1');
-  var playSound = document.getElementById('playWave');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume2 () {
-  var volumeSliderVisibility = document.getElementById('volume2');
-  var soundIconOpacity = document.getElementById('image2');
-  var playSound = document.getElementById('playRain');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume3 () {
-  var volumeSliderVisibility = document.getElementById('volume3');
-  var soundIconOpacity = document.getElementById('image3');
-  var playSound = document.getElementById('playThunder');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume4 () {
-  var volumeSliderVisibility = document.getElementById('volume4');
-  var soundIconOpacity = document.getElementById('image4');
-  var playSound = document.getElementById('playWind');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume5 () {
-  var volumeSliderVisibility = document.getElementById('volume5');
-  var soundIconOpacity = document.getElementById('image5');
-  var playSound = document.getElementById('playBlizzard');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume6 () {
-  var volumeSliderVisibility = document.getElementById('volume6');
-  var soundIconOpacity = document.getElementById('image6');
-  var playSound = document.getElementById('playNight');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume7 () {
-  var volumeSliderVisibility = document.getElementById('volume7');
-  var soundIconOpacity = document.getElementById('image7');
-  var playSound = document.getElementById('playHailstorm');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
-}
-
-function showVolume8 () {
-  var volumeSliderVisibility = document.getElementById('volume8');
-  var soundIconOpacity = document.getElementById('image8');
-  var playSound = document.getElementById('playPink');
-  imageClick(volumeSliderVisibility, soundIconOpacity, playSound);
 }

@@ -10,74 +10,75 @@
   </head>
   <body>
     <p class="logo">Sound Generator</p>
-    <img src="volume-icons/speaker-on.png" id="speakerId" class="speaker">
-    <img src="stopwatch.png" id="stopwatchId" class="stopwatch">
+    <img id="speakerId" class="speaker" src="volume-icons/speaker-on.png">
+    <img id="stopwatchId" class="stopwatch" src="stopwatch.png">
 
     <div class="centered-layout">
       <div class="flex-container">
 
-        <div id="player1">
+        <!-- <div id="player1"></div> -->
+        <div>
           <audio id="playWave">
             <source src="audio/wave-sound.ogg" type="audio/ogg">
           </audio>
-          <img src="weather-icons/030-wave.png" class="sound" id="image1">
-          <input type="range" min="1" max="100" value="50" class="slider" id="volume1">
+          <img id="image1" class="sound" src="weather-icons/030-wave.png" onclick="playSound(volume1, image1, playWave)">
+          <input id="volume1" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
         <div>
           <audio id="playRain">
             <source src="audio/rain-sound.ogg" type="audio/ogg">
           </audio>
-          <img src="weather-icons/002-rain.png" class="sound" onclick="showVolume2()" id="image2">
-          <input type="range" min="1" max="100" value="50" class="slider" id="volume2">
+          <img id="image2" class="sound" src="weather-icons/002-rain.png" onclick="playSound(volume2, image2, playRain)">
+          <input id="volume2" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
         <div>
           <audio id="playThunder">
             <source src="audio/thunder-sound.ogg" type="audio/ogg">
           </audio>
-            <img src="weather-icons/004-storm.png" class="sound" onclick="showVolume3()" id="image3">
-            <input type="range" min="1" max="100" value="50" class="slider" id="volume3">
+            <img id="image3" class="sound" src="weather-icons/004-storm.png" onclick="playSound(volume3, image3, playThunder)">
+            <input id="volume3" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
         <div>
           <audio id="playWind">
             <source src="audio/wind-sound.ogg" type="audio/ogg">
           </audio>
-            <img src="weather-icons/017-wind.png" class="sound" onclick="showVolume4()" id="image4">
-            <input type="range" min="1" max="100" value="50" class="slider" id="volume4">
+            <img id="image4" class="sound" src="weather-icons/017-wind.png" onclick="playSound(volume4, image4, playWind)">
+            <input id="volume4" class="slider" type="range" min="1" max="100" value="50">
         </div>
         
         <div>
             <audio id="playBlizzard">
               <source src="audio/blizzard-sound.ogg" type="audio/ogg">
             </audio>
-              <img src="weather-icons/015-snow.png" class="sound" onclick="showVolume5()" id="image5">
-              <input type="range" min="1" max="100" value="50" class="slider" id="volume5">
+              <img id="image5" class="sound" src="weather-icons/015-snow.png" onclick="playSound(volume5, image5, playBlizzard)">
+              <input id="volume5" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
         <div>
             <audio id="playNight">
               <source src="audio/night-sound.ogg" type="audio/ogg">
             </audio>
-              <img src="weather-icons/008-moon.png" class="sound" onclick="showVolume6()" id="image6">
-              <input type="range" min="1" max="100" value="50" class="slider" id="volume6">
+              <img id="image6" class="sound" src="weather-icons/008-moon.png" onclick="playSound(volume6, image6, playNight)">
+              <input id="volume6" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
         <div>
             <audio id="playHailstorm">
               <source src="audio/hailstorm-sound.ogg" type="audio/ogg">
             </audio>
-              <img src="weather-icons/014-Hailstorm.png" class="sound" onclick="showVolume7()" id="image7">
-              <input type="range" min="1" max="100" value="50" class="slider" id="volume7">
+              <img id="image7" class="sound" src="weather-icons/014-Hailstorm.png" onclick="playSound(volume7, image7, playHailstorm)">
+              <input id="volume7" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
         <div>
             <audio id="playPink">
               <source src="audio/pink-noise.ogg" type="audio/ogg">
             </audio>
-              <img src="weather-icons/pink-noise.png" class="sound" onclick="showVolume8()" id="image8">
-              <input type="range" min="1" max="100" value="50" class="slider" id="volume8">
+              <img id="image8" class="sound" src="weather-icons/pink-noise.png" onclick="playSound(volume8, image8, playPink)">
+              <input id="volume8" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
       </div>
