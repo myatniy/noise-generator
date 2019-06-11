@@ -11,12 +11,10 @@
   <body>
     <p class="logo">Sound Generator</p>
     <img id="speakerId" class="speaker" src="volume-icons/speaker-on.png">
-    <img id="stopwatchId" class="stopwatch" src="stopwatch.png">
 
     <div class="centered-layout">
       <div class="flex-container">
 
-        <!-- <div id="player1"></div> -->
         <div>
           <audio id="playWave">
             <source src="audio/wave-sound.ogg" type="audio/ogg">
@@ -83,7 +81,104 @@
 
       </div>
     </div>
+    <div class="gallery">
+      <div class="flex-container-gallery">
+        <div>
+          <img id="imgGalleryId1" class="img-gallery" src="gallery/images/wp (1).jpg" onclick="fullscreen(modalId1, imgGalleryId1, imgGalleryModalId1, closeId1)">
+          
+          <div id="modalId1" class="modal">
+            <span id="closeId1">&times;</span>
+            <img id="imgGalleryModalId1" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId2" class="img-gallery" src="gallery/images/wp (2).jpg" onclick="fullscreen(modalId2, imgGalleryId2, imgGalleryModalId2, closeId2)">
 
-    <script src="my-script.js"></script>
+          <div id="modalId2" class="modal">
+            <span id="closeId2">&times;</span>
+            <img id="imgGalleryModalId2" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId3" class="img-gallery" src="gallery/images/wp (3).jpg" onclick="fullscreen(modalId3, imgGalleryId3, imgGalleryModalId3, closeId3)">
+
+          <div id="modalId3" class="modal">
+            <span id="closeId3">&times;</span>
+            <img id="imgGalleryModalId3" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId4" class="img-gallery" src="gallery/images/wp (4).jpg" onclick="fullscreen(modalId4, imgGalleryId4, imgGalleryModalId4, closeId4)">
+
+          <div id="modalId4" class="modal">
+            <span id="closeId4">&times;</span>
+            <img id="imgGalleryModalId4" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId5" class="img-gallery" src="gallery/images/wp (5).jpg" onclick="fullscreen(modalId5, imgGalleryId5, imgGalleryModalId5, closeId5)">
+
+          <div id="modalId5" class="modal">
+            <span id="closeId5">&times;</span>
+            <img id="imgGalleryModalId5" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId6" class="img-gallery" src="gallery/images/wp (6).jpg" onclick="fullscreen(modalId6, imgGalleryId6, imgGalleryModalId6, closeId6)">
+
+          <div id="modalId6" class="modal">
+            <span id="closeId6">&times;</span>
+            <img id="imgGalleryModalId6" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId7" class="img-gallery" src="gallery/images/wp (7).jpg" onclick="fullscreen(modalId7, imgGalleryId7, imgGalleryModalId7, closeId7)">
+
+          <div id="modalId7" class="modal">
+            <span id="closeId7">&times;</span>
+            <img id="imgGalleryModalId7" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId8" class="img-gallery" src="gallery/images/wp (8).jpg" onclick="fullscreen(modalId8, imgGalleryId8, imgGalleryModalId8, closeId8)">
+
+          <div id="modalId8" class="modal">
+            <span id="closeId8">&times;</span>
+            <img id="imgGalleryModalId8" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId9" class="img-gallery" src="gallery/images/wp (9).jpg" onclick="fullscreen(modalId9, imgGalleryId9, imgGalleryModalId9, closeId9)">
+
+          <div id="modalId9" class="modal">
+            <span id="closeId9">&times;</span>
+            <img id="imgGalleryModalId9" class="modal-content">
+          </div>
+        </div>
+        <div>
+          <img id="imgGalleryId10" class="img-gallery" src="gallery/images/wp (10).jpg" onclick="fullscreen(modalId10, imgGalleryId10, imgGalleryModalId10, closeId10)">
+
+          <div id="modalId10" class="modal">
+            <span id="closeId10">&times;</span>
+            <img id="imgGalleryModalId10" class="modal-content">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intersection"></div>
+
+    <div id="timer-container">
+      <form onsubmit="return false">
+        <input id="timeId" type="time" value="00:05" name="usr_time">
+        <input id="setUpTimeButtonId" type="submit" value="Пуск" onclick="setUpTimer(timeId)">
+        <input id="reset" type="submit" value="Сбросить" style="margin: 5px 142px 0; display: none;">
+      </form>
+      <div style="margin: 5px 110px 0;">
+        <span id="time"></span>
+      </div>
+    </div>
+
+    <script defer src="my-script.js"></script>
   </body>
 </html>
