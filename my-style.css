@@ -27,6 +27,26 @@ body {
   top: -64px;
 }
 
+.speaker:hover {
+  cursor: pointer;
+}
+
+#infoId {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  opacity: 0.5;
+  float: right;
+  position: relative;
+  top: -64px;
+  left: -4px;
+}
+
+#infoId:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .stopwatch {
   width: 30px;
   height: 30px;
