@@ -5,20 +5,23 @@
 
 // variable below is used for correct execution of ChangeVolumeState(), because i have 2 minutes experience in JS
 let cursedSrcOfSpeakerId = document.getElementById('speakerId').src;
+const srcOfSpeakerId = document.getElementById('speakerId');
+const audio = document.querySelectorAll('audio');
 
 speakerId.onclick = function() {
-  const srcOfSpeakerId = document.getElementById('speakerId');
-  const audio = document.querySelectorAll('audio');
-
   if (srcOfSpeakerId.src === cursedSrcOfSpeakerId) {
-    audio.forEach(elem => muteAudio(elem));
-    srcOfSpeakerId.src = 'volume-icons/speaker-off.png';
+    changeVolumeSpeakerIcon();
     cursedSrcOfSpeakerId = 'Sound is off';
   } else {
     audio.forEach(elem => unmuteAudio(elem));
     srcOfSpeakerId.src = 'volume-icons/speaker-on.png';
     cursedSrcOfSpeakerId = srcOfSpeakerId.src;
   }
+}
+
+function changeVolumeSpeakerIcon() {
+  audio.forEach(elem => muteAudio(elem));
+  srcOfSpeakerId.src = 'volume-icons/speaker-off.png';
 }
 
 function muteAudio(elem) {
@@ -97,11 +100,7 @@ function setUpTimer(timerTime) {
 function startTimer(duration, display) {
 
   reset.onclick = function () {
-    timeInput.style.display = 'inline';
-    setUpTimeButton.style.display = 'inline';
-    showReset.style.display = 'none';
-    showTime.style.display = 'none';
-
+    resetTimerState();
     clearInterval(countdown);
   }
 
@@ -120,24 +119,21 @@ function startTimer(duration, display) {
 
     if (--timer < 0) {
       timer = duration;
-      console.log(timer);
     }
 
     lastAction = duration--;
     console.log(lastAction);
     if (lastAction === 0) {
-      const srcOfSpeakerId = document.getElementById('speakerId');
-      const audio = document.querySelectorAll('audio');
-
-      audio.forEach(elem => muteAudio(elem));
-      srcOfSpeakerId.src = 'volume-icons/speaker-off.png';
-
-      timeInput.style.display = 'inline';
-      setUpTimeButton.style.display = 'inline';
-      showReset.style.display = 'none';
-      showTime.style.display = 'none';
-
+      changeVolumeSpeakerIcon();
+      resetTimerState();
       clearInterval(countdown);
     }
   }, 1000);
+}
+
+function resetTimerState() {
+  timeInput.style.display = 'inline';
+  setUpTimeButton.style.display = 'inline';
+  showReset.style.display = 'none';
+  showTime.style.display = 'none';
 }

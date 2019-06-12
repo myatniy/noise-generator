@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="my-style.css" />
-    <title>Sound Generator</title>
+    <title>Генератор звуков</title>
   </head>
   <body>
-    <p class="logo">Sound Generator</p>
+    <p class="logo">Генератор звуков</p>
     <img id="speakerId" class="speaker" src="volume-icons/speaker-on.png">
 
     <div class="centered-layout">
@@ -19,7 +19,7 @@
           <audio id="playWave">
             <source src="audio/wave-sound.ogg" type="audio/ogg">
           </audio>
-          <img id="image1" class="sound" src="weather-icons/030-wave.png" onclick="playSound(volume1, image1, playWave)">
+          <img id="image1" class="sound" title="Звук волны" src="weather-icons/030-wave.png" onclick="playSound(volume1, image1, playWave)">
           <input id="volume1" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
@@ -27,7 +27,7 @@
           <audio id="playRain">
             <source src="audio/rain-sound.ogg" type="audio/ogg">
           </audio>
-          <img id="image2" class="sound" src="weather-icons/002-rain.png" onclick="playSound(volume2, image2, playRain)">
+          <img id="image2" class="sound" title="Звук дождя" src="weather-icons/002-rain.png" onclick="playSound(volume2, image2, playRain)">
           <input id="volume2" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
@@ -35,7 +35,7 @@
           <audio id="playThunder">
             <source src="audio/thunder-sound.ogg" type="audio/ogg">
           </audio>
-            <img id="image3" class="sound" src="weather-icons/004-storm.png" onclick="playSound(volume3, image3, playThunder)">
+            <img id="image3" class="sound" title="Звук шторма" src="weather-icons/004-storm.png" onclick="playSound(volume3, image3, playThunder)">
             <input id="volume3" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
@@ -43,7 +43,7 @@
           <audio id="playWind">
             <source src="audio/wind-sound.ogg" type="audio/ogg">
           </audio>
-            <img id="image4" class="sound" src="weather-icons/017-wind.png" onclick="playSound(volume4, image4, playWind)">
+            <img id="image4" class="sound" title="Звук ветра" src="weather-icons/017-wind.png" onclick="playSound(volume4, image4, playWind)">
             <input id="volume4" class="slider" type="range" min="1" max="100" value="50">
         </div>
         
@@ -51,7 +51,7 @@
             <audio id="playBlizzard">
               <source src="audio/blizzard-sound.ogg" type="audio/ogg">
             </audio>
-              <img id="image5" class="sound" src="weather-icons/015-snow.png" onclick="playSound(volume5, image5, playBlizzard)">
+              <img id="image5" class="sound" title="Звук снежной бури" src="weather-icons/015-snow.png" onclick="playSound(volume5, image5, playBlizzard)">
               <input id="volume5" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
@@ -59,7 +59,7 @@
             <audio id="playNight">
               <source src="audio/night-sound.ogg" type="audio/ogg">
             </audio>
-              <img id="image6" class="sound" src="weather-icons/008-moon.png" onclick="playSound(volume6, image6, playNight)">
+              <img id="image6" class="sound" title="Звук ночи" src="weather-icons/008-moon.png" onclick="playSound(volume6, image6, playNight)">
               <input id="volume6" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
@@ -67,7 +67,7 @@
             <audio id="playHailstorm">
               <source src="audio/hailstorm-sound.ogg" type="audio/ogg">
             </audio>
-              <img id="image7" class="sound" src="weather-icons/014-Hailstorm.png" onclick="playSound(volume7, image7, playHailstorm)">
+              <img id="image7" class="sound" title="Звук града в лесу" src="weather-icons/014-Hailstorm.png" onclick="playSound(volume7, image7, playHailstorm)">
               <input id="volume7" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
@@ -75,12 +75,71 @@
             <audio id="playPink">
               <source src="audio/pink-noise.ogg" type="audio/ogg">
             </audio>
-              <img id="image8" class="sound" src="weather-icons/pink-noise.png" onclick="playSound(volume8, image8, playPink)">
+              <img id="image8" class="sound" title="Розовый шум" src="weather-icons/pink-noise.png" onclick="playSound(volume8, image8, playPink)">
               <input id="volume8" class="slider" type="range" min="1" max="100" value="50">
+        </div>
+
+        <div>
+            <audio id="playWhite">
+              <source src="audio/white-noise.ogg" type="audio/ogg">
+            </audio>
+              <img id="image9" class="sound" title="Белый шум" src="weather-icons/white-noise.png" onclick="playSound(volume9, image9, playWhite)">
+              <input id="volume9" class="slider" type="range" min="1" max="100" value="50">
+        </div>
+
+        <div>
+            <audio id="playBrown">
+              <source src="audio/brown-noise.ogg" type="audio/ogg">
+            </audio>
+              <img id="image10" class="sound" title="Коричневый шум" src="weather-icons/brown-noise.png" onclick="playSound(volume10, image10, playBrown)">
+              <input id="volume10" class="slider" type="range" min="1" max="100" value="50">
+        </div>
+
+        <div>
+            <audio id="playTrain">
+              <source src="audio/train-sound.ogg" type="audio/ogg">
+            </audio>
+              <img id="image11" class="sound" title="Звук поезда" style="filter: invert(0);" src="weather-icons/train-noise.png" onclick="playSound(volume11, image11, playTrain)">
+              <input id="volume11" class="slider" type="range" min="1" max="100" value="50">
+        </div>
+
+        <div>
+            <audio id="playFireplace">
+              <source src="audio/fireplace-sound.ogg" type="audio/ogg">
+            </audio>
+              <img id="image12" class="sound" title="Звук костра" src="weather-icons/fireplace-noise.png" onclick="playSound(volume12, image12, playFireplace)">
+              <input id="volume12" class="slider" type="range" min="1" max="100" value="50">
+        </div>
+
+        <div>
+            <audio id="playCafe">
+              <source src="audio/cafe-sound.ogg" type="audio/ogg">
+            </audio>
+              <img id="image13" class="sound" title="Звук кафе" src="weather-icons/cafe-noise.png" onclick="playSound(volume13, image13, playCafe)">
+              <input id="volume13" class="slider" type="range" min="1" max="100" value="50">
+        </div>
+
+        <div>
+            <audio id="playFan">
+              <source src="audio/fan-noise.ogg" type="audio/ogg">
+            </audio>
+              <img id="image14" class="sound" title="Звук вентилятора" src="weather-icons/fan-noise.png" onclick="playSound(volume14, image14, playFan)">
+              <input id="volume14" class="slider" type="range" min="1" max="100" value="50">
         </div>
 
       </div>
     </div>
+    <div id="timer-container">
+      <form onsubmit="return false">
+        <input id="timeId" type="time" value="00:05" name="usr_time">
+        <input id="setUpTimeButtonId" type="submit" value="Пуск" onclick="setUpTimer(timeId)">
+        <input id="reset" type="submit" value="Сбросить" style="margin: 5px 142px 0; display: none;">
+      </form>
+      <div style="margin: 5px 110px 0;">
+        <span id="time"></span>
+      </div>
+    </div>
+    <div class="intersection"></div>
     <div class="gallery">
       <div class="flex-container-gallery">
         <div>
@@ -165,20 +224,6 @@
         </div>
       </div>
     </div>
-
-    <div class="intersection"></div>
-
-    <div id="timer-container">
-      <form onsubmit="return false">
-        <input id="timeId" type="time" value="00:05" name="usr_time">
-        <input id="setUpTimeButtonId" type="submit" value="Пуск" onclick="setUpTimer(timeId)">
-        <input id="reset" type="submit" value="Сбросить" style="margin: 5px 142px 0; display: none;">
-      </form>
-      <div style="margin: 5px 110px 0;">
-        <span id="time"></span>
-      </div>
-    </div>
-
     <script defer src="my-script.js"></script>
   </body>
 </html>
